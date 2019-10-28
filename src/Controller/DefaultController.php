@@ -46,4 +46,14 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+    
+    /**
+     * @Route("/login", name="loginRedirect")
+     */
+    public function loginRedirect()
+    {
+        return $this->render('default/index.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
 }
