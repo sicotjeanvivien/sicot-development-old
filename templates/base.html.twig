@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="UTF-8">
+         <title>{% block title %}Welcome!{% endblock %}</title>
+         {% block stylesheets %}
+          {{ encore_entry_link_tags('app') }}
+
+         {% endblock %}
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+     </head>
+     <body>
+         {% block body %}
+         hello boys
+         {% endblock %}
+         {% block javascripts %}
+         
+         <!-- Include the compiled script-->
+             {{ encore_entry_script_tags('app') }}
+         {% endblock %}
+     </body>
+ </html>
