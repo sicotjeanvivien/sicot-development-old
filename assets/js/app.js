@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Skill from './components/Skill';
 import Contact from './components/Contact';
 import Project from './components/Project';
+import Login from './Components/Login';
 
 
 class App extends React.Component {
@@ -42,6 +43,9 @@ class App extends React.Component {
                   <li className='nav-item'>
                     <Link to='/projet' className='nav-link'><strong>Projet</strong></Link>
                   </li>
+                  <li className='nav-item'>
+                    <Link to='/login' className='nav-link'></Link>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -52,6 +56,7 @@ class App extends React.Component {
             <Route path="/experience" component={Experience} />
             <Route path="/contact" component={Contact} />
             <Route path="/projet" component={Project} />
+            <Route path="/login" component={Login} />
           </div>
         </Router>
 
