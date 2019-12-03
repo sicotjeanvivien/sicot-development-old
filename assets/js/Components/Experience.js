@@ -1,5 +1,6 @@
 import React from "react";
 import Job from "./Job";
+import Skill from "./Skill";
 
 const experiences = [
     {
@@ -96,10 +97,13 @@ class Experience extends React.Component {
             ))
 
         return (
+            <React.Fragment>
             <div className='row'>
                 <h2 className='col-12 mt-3 mb-3'>{"expérience".toUpperCase()}</h2>
                 {listeExp}
             </div>
+            <Skill/>
+            </ React.Fragment>
         )
     }
 }

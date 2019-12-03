@@ -6,21 +6,25 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Common\Persistence\ObjectManager;
 use App\Entity\User;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends AbstractController
 {
     /**
      * @Route("/", name="default")
      */
-    public function index(ObjectManager $manager)
+    public function index()
     {
-        // $user = new User();
-        // $user->setUsername('admin');
-    
-        // $user->setPassword('$argon2id$v=19$m=65536,t=4,p=1$bW9PeUs0Y2RyajFFai5YbQ$KB0pG5n73uF6OZQmw4S4REdCL3vj/WBMrO1v9jr0fqM');
-    
-        // $manager->persist($user);
-        // $manager->flush();
+        return $this->render('default/index.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
+
+    /**
+     * @Route("/AboutMe", name="aboutMeRedirect")
+     */
+    public function aboutMeRedirect()
+    {
         return $this->render('default/index.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
@@ -56,13 +60,13 @@ class DefaultController extends AbstractController
         ]);
     }
     
-    // /**
-    //  * @Route("/login", name="loginRedirect")
-    //  */
-    // public function loginRedirect()
-    // {
-    //     return $this->render('default/index.html.twig', [
-    //         'controller_name' => 'DefaultController',
-    //     ]);
-    // }
+    /**
+     * @Route("/login", name="loginRedirect")
+     */
+    public function loginRedirect(Request $request)
+    {
+        return $this->render('default/index.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
 }

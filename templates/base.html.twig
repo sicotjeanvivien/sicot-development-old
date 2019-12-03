@@ -13,6 +13,9 @@
          {% block body %}
          hello boys
          {% endblock %}
+
+<input type="hidden" name="_csrf_token" id='csrf_token' value="{{ csrf_token('authenticate') }}">
+
          {% block javascripts %}
          
          <!-- Include the compiled script-->

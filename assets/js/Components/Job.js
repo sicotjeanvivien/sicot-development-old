@@ -9,20 +9,20 @@ class Job extends React.Component {
                 {task}
             </li>
         ));
-        
+
         const listeTech = this.props.tech.map((tech, i) => (
-            <li key={i} className='list-group-item '>
+            <div key={i} className='col-2 border m-1'>
                 {tech}
-            </li>
+            </div>
         ))
 
         const tech = (
             listeTech.length > 0 ?
-                <div>
+                <div className=''>
                     <h6>Techonologie: </h6>
-                    <ul className='list-group list-group-horizontal flex-wrap'>
+                    <div className='row'>
                         {listeTech}
-                    </ul>
+                    </div>
                 </div>
                 :
                 ''
@@ -41,7 +41,8 @@ class Job extends React.Component {
                             {listeTask}
                         </ul>
                     </div>
-                    {tech}
+                    
+                {tech}
                 </div>
             </div>
         )
